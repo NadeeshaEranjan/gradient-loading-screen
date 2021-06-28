@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gradient Loading Screen</title>
+	<style type="text/css">
+		@-webkit-keyframes LoadingBarProgress{
+			0%{background-position:0% 0}
+			to{background-position:125% 0}
+		}
+
+		@keyframes LoadingBarProgress{
+			0%{background-position:0% 0}
+			to{background-position:125% 0}
+		}
+
+		@-webkit-keyframes LoadingBarEnter{
+			0%{-webkit-transform:scaleX(0);transform:scaleX(0)}
+			to{-webkit-transform:scaleX(1);transform:scaleX(1)}
+		}
+
+		@keyframes LoadingBarEnter{
+			0%{-webkit-transform:scaleX(0);transform:scaleX(0)}
+			to{-webkit-transform:scaleX(1);transform:scaleX(1)}
+		}
+
+		.BHkOG {
+		    height: 45px;
+		    background: #27c4f5 -webkit-gradient(linear,left top,right top,from(#27c4f5),color-stop(#a307ba),color-stop(#fd8d32),color-stop(#58c322),to(#27c4f5));
+		    background: #27c4f5 -webkit-linear-gradient(left,#27c4f5,#a307ba,#fd8d32,#58c322,#27c4f5);
+		    background: #27c4f5 linear-gradient(to right,#27c4f5,#a307ba,#fd8d32,#58c322,#27c4f5);
+		    background-size: 500%;
+		    -webkit-animation: 2s linear infinite LoadingBarProgress,.5s ease-out LoadingBarEnter;
+		    animation: 2s linear infinite LoadingBarProgress,.5s ease-out LoadingBarEnter;
+		    -webkit-transform-origin: left;
+		    transform-origin: left;
+		    width: 100%;
+		}
+		.PID-B {
+		    left: 0;
+		    position: fixed;
+		    right: 0;
+		    top: 0;
+		    z-index: 12;
+		}
+	</style>
+</head>
+<body>
+	<div data-visualcompletion="loading-state" class="BHkOG PID-B"></div>
+</body>
+</html>
